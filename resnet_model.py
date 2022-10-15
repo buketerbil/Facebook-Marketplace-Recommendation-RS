@@ -1,5 +1,6 @@
 import pandas as pd
 import torch
+import time
 from glob import glob
 from PIL import Image
 from numpy import asarray
@@ -101,11 +102,15 @@ def train(model, dataloader, epochs=10):
     
 
 
-#Putting everything together to run
+#Putting everything together for the training loop
 if __name__ == '__main__':
     torchdset = ResizedDataset()
     imagedsloader = DataLoader(torchdset, batch_size=10, shuffle=True)
     model = ImageClassifier()
     train(model, imagedsloader)
+
+    torch.save(model.state_dict(), f'/Users/macbook/Documents/GitHub/facebook-marketplaces-recommendation-ranking-system/model_evaluation/{time.time}')
+    sd = (model.state_dict())
+    torch.save(sd['fc.weight'], f'/Users/macbook/Documents/GitHub/facebook-marketplaces-recommendation-ranking-system/model_evaluation/weights/{time.time}')
 
 
