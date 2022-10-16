@@ -39,4 +39,4 @@ I created a classification model that predicts the category of each product.
 
 ## 5. Image Classification with CNNs in PyTorch 
 
-The first ulticlass image classification model was built in PyTorch. However, the CNN architecture that I built was improved by fine-tuning a pre-trained RESNET-50 model instead.
+The first ulticlass image classification model was built in PyTorch. However, the Convolutional Neural Network architecture that I built was improved by fine-tuning a pre-trained RESNET-50 model instead.
