@@ -27,7 +27,7 @@ I created a function to
 - Pass these features as X, and the price values that were stripped off of ‘£’s (to type them as floats) as Y
 - Fit these onto a scikit learn Linear Regression model, and predict the first 10 examples
 
-## 4. First image classification model
+## 4. First simple classification model
 
 I created a classification model that predicts the category of each product.
 
@@ -35,3 +35,8 @@ I created a classification model that predicts the category of each product.
 - I created a pandas data frame of the images’ paths from the resized images folder (using glob), to then be able to strip the image names off of the ‘.jpg’ ends - and only have their ID names left. Then I merged it with the previously merged data frame on the features id and category
 - I made sure to get rid of the extra descriptions at the end of the categories to have only the most general category
 -
+
+
+## 5. Image Classification with CNNs in PyTorch 
+
+The first ulticlass image classification model was built in PyTorch. However, the CNN architecture that I built was improved by fine-tuning a pre-trained RESNET-50 model instead.
